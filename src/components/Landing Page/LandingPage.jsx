@@ -3,6 +3,7 @@ import HeroSection from '../Hero Section/HeroSection'
 import ContentSection from '../Content Section/ContentSection'
 import FeatureSection from '../Feature Section/FeatureSection'
 import CTASection from '../CTA Section/CTASection'
+import {DocumentPage} from '../DocumentPages/DocumentPage'
 
 
 const LandingPage = () => {
@@ -12,6 +13,7 @@ const LandingPage = () => {
       <ContentSection/>
       <FeatureSection/>
       <CTASection/>
+      <DocumentPage/>  
 
 
     </>

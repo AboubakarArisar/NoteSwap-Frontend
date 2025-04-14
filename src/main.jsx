@@ -7,7 +7,7 @@ import App from './App.jsx'
 import AboutUs from './components/About/AboutUs.jsx'
 import ContactUs from './components/Contact/ContactUs.jsx'
 import LandingPage from './components/Landing Page/LandingPage.jsx'
-
+import {ProfileHeader} from './components/Profile/ProfileHeader.jsx'
 
 
 const router= createBrowserRouter (
@@ -18,6 +18,7 @@ const router= createBrowserRouter (
     <Route path="/" element={<LandingPage/>} />
     <Route path="about" element={<AboutUs/>} />
     <Route path="contact" element={<ContactUs/>} />
+    <Route path="profile" element={<ProfileHeader/>} />
   </Route>
 
   )
