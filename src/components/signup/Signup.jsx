@@ -1,23 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function Signup() {
-    const [department, setDepartment] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
-    const [termsAccepted, setTermsAccepted] = useState(false);
+  const [department, setDepartment] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [termsAccepted, setTermsAccepted] = useState(false);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (password !== confirmPassword) {
-            alert('Passwords do not match!');
-            return;
-        }
-        if (!termsAccepted) {
-            alert('You must accept the terms and conditions!');
-            return;
-        }
-        alert(`Department: ${department}\nAccount created successfully!`);
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (password !== confirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
+    if (!termsAccepted) {
+      alert("You must accept the terms and conditions!");
+      return;
+    }
+    alert(`Department: ${department}\nAccount created successfully!`);
+  };
+
 
     return (
         <section className="bg-gray-100 dark:bg-gray-800">
@@ -158,10 +159,31 @@ function Signup() {
                             </p>
                         </form>
                     </div>
+
                 </div>
-            </div>
-        </section>
-    );
+              </div>
+              <button
+                type='submit'
+                className='w-full text-black bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800'
+              >
+                Create an account
+              </button>
+              <p className='text-sm font-light text-gray-500 dark:text-gray-400'>
+                Already have an account?{" "}
+                <a
+                  href='login.jsx'
+                  className='font-medium text-primary-600 hover:underline dark:text-primary-500'
+                >
+                  Login here
+                </a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default Signup;
+
